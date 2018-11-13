@@ -4,7 +4,7 @@
     private $host = 'localhost';
     private $db_name = 'ajdutdb';
     private $username = 'root';
-    private $password = '123456';
+    private $password = '';
     private $conn;
 
     // DB Connect

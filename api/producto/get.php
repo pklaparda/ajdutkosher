@@ -17,7 +17,7 @@
   $result = $producto->get();
   // Get row count
   $num = $result->rowCount();
-
+  
   // Check if any productos
   if($num > 0) {
     // Productos array
