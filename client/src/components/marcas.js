@@ -11,7 +11,7 @@ export default class Marcas extends Component {
     }
 
     componentWillMount() {
-        fetch('api/marca/get.php')
+        fetch('/api/marca/get.php')
             .then(data => data.json())
             .then(res => {
                 this.setState({ marcas: res });

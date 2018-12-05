@@ -10,7 +10,7 @@ export default class Codigos extends Component {
     }
 
     componentWillMount() {
-        fetch('api/codigo/get.php')
+        fetch('/api/codigo/get.php')
             .then(data => data.json())
             .then(res => {
                 this.setState({ codigos: res });

@@ -10,7 +10,7 @@ export default class Productos extends Component {
     }
 
     componentWillMount() {
-        fetch('api/producto/get.php')
+        fetch('/api/producto/get.php')
             .then(data => data.json())
             .then(res => {
                 this.setState({ productos: res });

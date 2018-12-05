@@ -3,6 +3,9 @@ import {Container} from 'reactstrap';
 import MyNavBar from './components/navbar';
 
 import Categorias from './components/categorias';
+import Productos from './components/productos';
+import Codigos from './components/codigos';
+import Marcas from './components/marcas';
 
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 

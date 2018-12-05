@@ -10,7 +10,7 @@ export default class Categorias extends Component {
     }
 
     componentWillMount() {
-        fetch('api/categoria/get.php')
+        fetch('/api/categoria/get.php')
             .then(data => data.json())
             .then(res => {
                 this.setState({ categorias: res });
