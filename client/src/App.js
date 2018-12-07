@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {Container} from 'reactstrap';
 import MyNavBar from './components/navbar';
-import { Jumbotron, Button } from 'reactstrap';
 
 import Categorias from './components/categorias';
 import Productos from './components/productos';
@@ -17,14 +15,14 @@ class App extends Component {
       <Router>
       <div className="App">
         <MyNavBar/>
-        <Container className="container-fluid">
+        <div className="container-fluid">
           {/* <Route path="/" component={this} /> */}
           <Route exact path="/" component={Home} />
           <Route path="/categorias/" component={Categorias} />
           <Route path="/productos/" component={Productos} />
           <Route path="/codigos/" component={Codigos} />
           <Route path="/marcas/" component={Marcas} />
-        </Container>
+        </div>
       </div>
       </Router>
     );

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { UncontrolledCarousel } from 'reactstrap';
+import { Col, UncontrolledCarousel } from 'reactstrap';
+
+
+
 
 export default class Home extends Component {
     constructor(props) {
@@ -37,10 +40,23 @@ export default class Home extends Component {
             }
           ];
         return (
-            
-          <UncontrolledCarousel items={items} className="row" style={{ width:'100%'}}/>
-          
-            
+        <div>
+                   
+          <div className="row" align="center" style={{ padding: "30px"}}>
+            <Col>
+            <img src={'img/empresas-logo.jpg'} style={{ maxHeight: "150px"}} />
+            <p style={{color: '#0ab0d6', textAlign: 'center', fontSize: '15px'}}>Ingresar como</p> 
+            <p style={{color: '#0ab0d6', textAlign: 'center', fontSize: '25px'}}>EMPRESAS</p>
+            </Col>
+            <Col>
+            <img src={'img/consumidor-logo.png'} style={{ maxHeight: "150px"}} />
+            <br></br>Ingresar como 
+            <br></br>CONSUMIDORES
+            </Col>
+          </div>  
+
+          <UncontrolledCarousel items={items} className="row"/>
+          </div>
         );
     }
 }
