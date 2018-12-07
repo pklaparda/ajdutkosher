@@ -44,7 +44,7 @@ export default class MyNavBar extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-              <Link to="/marcas/">Marcas</Link>
+                  <Link to="/marcas/">Marcas</Link>
               </NavItem>
               <NavItem>
                 <NavLink>
