@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { UncontrolledCarousel } from 'reactstrap';
-import { Parallax, Background } from 'react-parallax';
 
 export default class Home extends Component {
     constructor(props) {
@@ -39,7 +38,9 @@ export default class Home extends Component {
           ];
         return (
             
-            <UncontrolledCarousel items={items} />
+          <UncontrolledCarousel items={items} className="row" style={{ width:'100%'}}/>
+          
+            
         );
     }
 }

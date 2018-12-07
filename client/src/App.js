@@ -17,7 +17,7 @@ class App extends Component {
       <Router>
       <div className="App">
         <MyNavBar/>
-        <Container className="pt-3">
+        <Container className="container-fluid">
           {/* <Route path="/" component={this} /> */}
           <Route exact path="/" component={Home} />
           <Route path="/categorias/" component={Categorias} />
