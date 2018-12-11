@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyNavBar from './components/navbar';
+import MyFooter from './components/footer';
 
 import Categorias from './components/categorias';
 import Productos from './components/productos';
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/codigos/" component={Codigos} />
           <Route path="/marcas/" component={Marcas} />
         </div>
+        <MyFooter/>
       </div>
       </Router>
     );

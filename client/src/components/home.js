@@ -58,7 +58,7 @@ export default class Home extends Component {
 
                 <UncontrolledCarousel items={items} className="row" />
 
-                <div className="items-leading clearfix">
+                <div className="items-leading clearfix" style={{padding:'15px'}}>
 										<article classNAme="item leading-0 clearfix" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
 
 											<div className="entry-header">
