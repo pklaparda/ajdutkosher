@@ -13,14 +13,14 @@ export default class MyNFooter extends React.Component {
       <footer style={{ padding: '15px', color: 'white', background: '#262626', textAlign: 'left' }}>
         <Container>
           <Row>
-            <Col>
-              <FontAwesome.FaHome />  Moldes 2449, Capital Federal, Argentina <br />
-              <FontAwesome.FaPhone />  (+5411) 4787-6712 <br />
-              <FontAwesome.FaWhatsapp />  (+54911) 2492-2744 <br />
-              <FontAwesome.FaEnvelope />  info@kosher.org.ar <br />
-              <FontAwesome.FaGlobe />  www.kosher.org.ar <br />
+            <Col xs="12" sm="6">
+              <FontAwesome.FaHome />  Moldes 2449, Capital Federal, Argentina <br/>
+              <FontAwesome.FaPhone />  (+5411) 4787-6712 <br/>
+              <FontAwesome.FaWhatsapp />  (+54911) 2492-2744 <br/>
+              <FontAwesome.FaEnvelope />  info@kosher.org.ar <br/>
+              <FontAwesome.FaGlobe />  www.kosher.org.ar <br/><br/>
             </Col>
-            <Col>
+            <Col xs="12" sm="6">
               <Iframe url="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJ2XSxsyq0vJURrRcHjx6wEBc"
                 width="100%"
                 height="100%"

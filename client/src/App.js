@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyNavBar from './components/navbar';
+import MainNavBar from './components/main-navbar';
 import MyFooter from './components/footer';
 
 import Categorias from './components/categorias';
@@ -15,7 +16,8 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        <MyNavBar/>
+        <MainNavBar/>
+        {/* <MyNavBar/> */}
         <div className="container-fluid">
           {/* <Route path="/" component={this} /> */}
           <Route exact path="/" component={Home} />
