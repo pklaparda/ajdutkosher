@@ -3,6 +3,8 @@ import MyNavBar from './components/navbar';
 import MainNavBar from './components/main-navbar';
 import MyFooter from './components/footer';
 
+import Empresas from './components/empresas';
+
 import Categorias from './components/categorias';
 import Productos from './components/productos';
 import Codigos from './components/codigos';
@@ -21,6 +23,7 @@ class App extends Component {
         <div className="container-fluid">
           {/* <Route path="/" component={this} /> */}
           <Route exact path="/" component={Home} />
+          <Route path="/empresas/" component={Empresas} />
           <Route path="/categorias/" component={Categorias} />
           <Route path="/productos/" component={Productos} />
           <Route path="/codigos/" component={Codigos} />
