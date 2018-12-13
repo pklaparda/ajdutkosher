@@ -45,9 +45,9 @@ export default class MainNavBar extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-              <NavLink>
-                <Link to="/contacto/">CONTACTO</Link>
-              </NavLink>
+                <NavLink>
+                  <Link to="/contacto/">CONTACTO</Link>
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
