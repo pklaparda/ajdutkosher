@@ -32,7 +32,7 @@ export default class MainNavBar extends React.Component {
         <Navbar className="bk-dark" dark expand="md">
           <NavbarBrand>
             <Link to="/">
-              <img src="img/AK-mini.png" alt="" style={{ height: "2rem" }} />
+              <img src="/img/AK-mini.png" alt="" style={{ height: "2rem" }} />
             </Link>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />

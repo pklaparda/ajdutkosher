@@ -1,0 +1,11 @@
+.carousel-empresas {
+  position: relative;
+}
+
+.carousel-text-fixed {
+  position: absolute;
+  top: 5%;
+  width: 96.666%;
+  color: #FFF;
+  text-align:center;
+}
