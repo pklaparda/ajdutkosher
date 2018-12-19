@@ -6,7 +6,7 @@ import * as FontAwesome from 'react-icons/fa';
 import CountUp, { startAnimation } from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
-import "../styles/empresas.css";
+import "../styles/style.css";
 import "../styles/carousel.css";
 
 export default class Empresas extends Component {
@@ -97,7 +97,7 @@ export default class Empresas extends Component {
                         style={{ width: '100%' }}
                     >
 
-                        <Row style={{ minHeight: '200px', color: 'white', padding: "15px" }} >
+                        <Row style={{ minHeight: '400px', color: 'white', padding: "15px", verticalAlign:'middle' }} >
                             <Col xs="12" sm="6" >
                                 <div className="icon-box-circle">
                                     <FontAwesome.FaChartLine className="features-icon"/>
@@ -134,7 +134,7 @@ export default class Empresas extends Component {
                         <br/>
                     </Col>
 
-                    <Col xs="12" sm="4" className="counter-box">
+                    <Col xs="12" sm="4" className="align-text-bottom">
                         <VisibilitySensor onChange={this.onVisibilityChange} offset={{top:10}} delayedCall>
                             <CountUp className={style.countup} start={0} end={this.state.didViewCountUp ? 50 : 0} duration={3} className="counter"/>
                         </VisibilitySensor>

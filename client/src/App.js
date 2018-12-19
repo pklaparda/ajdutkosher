@@ -4,6 +4,7 @@ import MainNavBar from './components/main-navbar';
 import MyFooter from './components/footer';
 
 import Empresas from './components/empresas';
+import Consumidores from './components/consumidores';
 
 import Categorias from './components/categorias';
 import Productos from './components/productos';
