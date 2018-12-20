@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  font-family: Raleway, sans-serif;
+}
+
 .icon-box-circle {
   width: 120px;
   height: 120px;
@@ -49,4 +54,3 @@
   color: white;
   vertical-align: bottom;
 }
-

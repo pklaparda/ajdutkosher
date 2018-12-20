@@ -29,7 +29,7 @@ export default class MainNavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar className="bk-dark" dark expand="md" fixed="top">
+        <Navbar className="bk-dark" dark expand="md">
           <NavbarBrand>
             <Link to="/">
               <img src="/img/AK-mini.png" alt="" style={{ height: "2rem" }} />
