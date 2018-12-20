@@ -45,7 +45,6 @@ export default class FormContacto extends Component {
             placeholder={
               this.props.esEmpresa ? "Empresa.." : "Nombre y apellido"
             }
-            type="text"
             value={this.state.name}
             onChange={e => this.setState({ name: e.target.value })}
           />
@@ -57,7 +56,6 @@ export default class FormContacto extends Component {
             id="email"
             name="email"
             placeholder="Email.."
-            type="email"
             value={this.state.email}
             onChange={e => this.setState({ email: e.target.value })}
           />
@@ -81,6 +79,11 @@ export default class FormContacto extends Component {
             borderColor: "#262626"
           }}
           className="w-100"
+          disabled={
+            this.state.comment === "" ||
+            this.state.name === "" ||
+            this.state.email === ""
+          }
         >
           {this.props.esEmpresa ? "Certifique su empresa" : "Enviar"}
         </Button>

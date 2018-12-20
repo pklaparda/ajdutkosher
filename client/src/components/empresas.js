@@ -222,7 +222,7 @@ export default class Empresas extends Component {
           >
             Para la obtención de la certificación Kosher se debe realizar una
             inspección de la planta productora para garantizar que tanto materia
-            prima , la maquinaria con las lineas de produccion cumplan con las
+            prima, la maquinaria con las lineas de produccion cumplan con las
             normativas Kosher.
           </Col>
           <FormContacto esEmpresa={true} class={"col col-md-9"} />
