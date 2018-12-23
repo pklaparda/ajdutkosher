@@ -72,7 +72,7 @@ export default class Home extends Component {
                   margin: "0px"
                 }}
               >
-                EMPRESAS
+                Empresas
               </h4>
               <h4
                 style={{
@@ -83,7 +83,7 @@ export default class Home extends Component {
                   margin: "0px"
                 }}
               >
-                (CERTIFICACIÓN KOSHER)
+                (certificación kosher)
               </h4>
             </Link>
           </Col>
@@ -113,7 +113,7 @@ export default class Home extends Component {
                   margin: "0px"
                 }}
               >
-                CONSUMIDORES
+                Consumidores
               </h4>
             </Link>
           </Col>

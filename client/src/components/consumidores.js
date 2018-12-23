@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Row, Col, Button, ButtonGroup } from "reactstrap";
 import FormContacto from "./form-contacto";
+import * as FontAwesome from "react-icons/fa";
 
 import "../styles/style.css";
 import "../styles/consumidor.css";
@@ -66,7 +68,7 @@ export default class Consumidores extends Component {
               los productos supervisados por Ajdut Kosher.
             </p>
             <h4
-              className="pb-4"
+              className="pb-1"
               style={{
                 fontSize: "1.5rem",
                 color: "#262626",
@@ -75,20 +77,39 @@ export default class Consumidores extends Component {
             >
               Es fácil, rápido y accesible
             </h4>
+
             <div className="d-flex flex-wrap pb-3">
-              <Button className="px-4 mr-4 mb-2 btn-custom">
-                Descarga la App
+              <Button outline className="px-2 btn-custom mr-2">
+                <a
+                  href="https://itunes.apple.com/US/app/id731823009?mt=8"
+                  target="_blank"
+                  style={{ color: "#0ab0d6" }}
+                >
+                  <FontAwesome.FaApple />
+                </a>
               </Button>
-              <Button className="px-4 mb-2 btn-custom">Ver lista online</Button>
+              <Button outline className="px-2 btn-custom mr-2">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.beatmobile.ak&hl=es"
+                  target="_blank"
+                  style={{ color: "#0ab0d6" }}
+                >
+                  <FontAwesome.FaAndroid />
+                </a>
+              </Button>
+
+              <Link to="/listaKosher/">
+                <Button className="px-2 btn-custom">Ver lista online</Button>
+              </Link>
             </div>
-            <ButtonGroup>
+          </Col>
+          <Col xs="12" sm="12" md="6" className="px-5">
+            <ButtonGroup className="d-flex justify-content-center pt-3">
               <Button onClick={e => this.switchToPlatform(IOS)}>iOS</Button>
               <Button onClick={e => this.switchToPlatform(Android)}>
                 Android
               </Button>
             </ButtonGroup>
-          </Col>
-          <Col xs="12" sm="12" md="6" className="px-5">
             <img
               src={this.state.platform === Android ? pathAndroid : pathIos}
               alt=""
