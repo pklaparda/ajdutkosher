@@ -98,7 +98,7 @@ export default class Consumidores extends Component {
                 </a>
               </Button>
 
-              <Link to="/listaKosher/">
+              <Link to={`${this.props.match.url}listaKosher/`}>
                 <Button className="px-2 btn-custom">Ver lista online</Button>
               </Link>
             </div>
