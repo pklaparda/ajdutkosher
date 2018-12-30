@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Collapse,
   Navbar,
@@ -6,10 +6,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink } from 'reactstrap';
-  import {Link} from 'react-router-dom';
+  NavLink
+} from "reactstrap";
+import { Link } from "react-router-dom";
+import "../styles/main-navbar.css";
 
-export default class MyNavBar extends React.Component {
+export default class MainNavBar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -18,6 +20,7 @@ export default class MyNavBar extends React.Component {
       isOpen: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -26,29 +29,34 @@ export default class MyNavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar className="bk-dark" dark expand="md">
           <NavbarBrand>
-            <Link to='/'>AjdutKosher</Link>
+            <Link to="/">
+              <img src="/img/AK-mini.png" alt="" style={{ height: "2rem" }} />
+            </Link>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink>
-                <Link to="/productos/">Productos</Link>
+                  <Link to="/empresas/" className="link">
+                    EMPRESAS (Certificación Kosher)
+                  </Link>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink>
-                  <Link to="/categorias/">Categorias</Link>
+                  <Link to="/consumidores/" className="link">
+                    CONSUMIDORES
+                  </Link>
                 </NavLink>
               </NavItem>
               <NavItem>
-                  <Link to="/marcas/">Marcas</Link>
-              </NavItem>
-              <NavItem>
                 <NavLink>
-                  <Link to="/codigos/">Codigos</Link>
+                  <Link to="/contacto/" className="link">
+                    CONTACTO
+                  </Link>
                 </NavLink>
               </NavItem>
             </Nav>

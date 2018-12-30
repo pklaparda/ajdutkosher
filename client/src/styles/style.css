@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  font-family: Raleway, sans-serif;
+}
+
+.icon-box-circle {
+  width: 120px;
+  height: 120px;
+  color: #3d449a;
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+  line-height: 115px;
+  border-radius: 100%;
+  margin-bottom: 15px;
+  display: inline-block;
+  border: 5px solid #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row-icons {
+  min-height: 200px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.features-icon {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  color: white;
+}
+
+.features-title {
+  text-align: center;
+}
+
+.features-description {
+  color: white;
+  text-align: center;
+}
+
+.counter {
+  font-family: Raleway, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.counter-box {
+  font-family: Raleway, sans-serif;
+  color: white;
+  vertical-align: bottom;
+}
