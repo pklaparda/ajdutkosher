@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Button, ButtonGroup } from "reactstrap";
+import { Parallax } from "react-parallax";
 import FormContacto from "./form-contacto";
 import * as FontAwesome from "react-icons/fa";
 
@@ -116,6 +117,64 @@ export default class Consumidores extends Component {
               style={{ width: "100%" }}
             />
           </Col>
+        </Row>
+        <Row>
+          <Parallax
+            blur={2}
+            bgImage={"/img/services-banner.jpg"}
+            bgImageAlt=""
+            strength={200}
+            style={{ width: "100%" }}
+          >
+            <Row
+              style={{
+                minHeight: "300px",
+                color: "white"
+              }}
+              className="d-flex align-items-center"
+            >
+              <Col
+                xs="12"
+                sm="12"
+                md="12"
+                className="px-5 pt-4 pb-2 d-flex flex-column justify-content-center align-items-center text-center"
+              >
+                <h1>Establecimientos certificados</h1>
+                <p className="m-0">
+                  Conocé los Establecimientos que cuentan con nuestra
+                  supervisión.
+                </p>
+              </Col>
+
+              <Col
+                xs="12"
+                sm="4"
+                className="px-5 py-2 d-flex align-items-center justify-content-center"
+              >
+                <Link to={`${this.props.match.url}restaurantes/`}>
+                  <Button className="btn-custom-reverse">Restaurantes</Button>
+                </Link>
+              </Col>
+              <Col
+                xs="12"
+                sm="4"
+                className="px-5 py-2 d-flex align-items-center justify-content-center"
+              >
+                <Link to={`${this.props.match.url}panaderias/`}>
+                  <Button className="btn-custom-reverse">Panaderías</Button>
+                </Link>
+              </Col>
+              <Col
+                xs="12"
+                sm="4"
+                className="px-5 py-2 d-flex align-items-center justify-content-center"
+              >
+                <Link to={`${this.props.match.url}catering/`}>
+                  <Button className="btn-custom-reverse">Catering</Button>
+                </Link>
+              </Col>
+            </Row>
+          </Parallax>
         </Row>
         <Row className="p-5 row d-flex justify-content-center">
           <FormContacto esEmpresa={false} class={"col col-md-9"} />

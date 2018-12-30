@@ -7,3 +7,14 @@
   color: #0ab0d6;
   filter: brightness(90%);
 }
+
+.btn-custom-reverse {
+  color: #ffffff;
+  background-color: #0ab0d6;
+  border-color: #0ab0d6;
+}
+.btn-custom-reverse:hover {
+  color: #0ab0d6;
+  background-color: #262626;
+  border-color: #0ab0d6;
+}
