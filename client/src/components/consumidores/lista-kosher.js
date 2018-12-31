@@ -10,7 +10,11 @@ import {
   ListGroup,
   ListGroupItem,
   ListGroupItemHeading,
-  ListGroupItemText
+  ListGroupItemText,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
 } from "reactstrap";
 import * as FontAwesome from "react-icons/fa";
 
@@ -22,11 +26,39 @@ export default class ListaKosher extends React.Component {
     this.state = {
       productos: [],
       productosFiltrados: [],
-      textoDeBusqueda: ""
+      textoDeBusqueda: "",
+      modalOpen: false,
+      modalCat: null
     };
     this.onSearchChange = this.onSearchChange.bind(this);
+    this.toggle = this.toggle.bind(this);
     this.timeOut = null;
   }
+
+  toggle = () => {
+    this.setState({
+      modalOpen: !this.state.modalOpen
+    });
+  };
+
+  mostrarModalCategoria = idCat => {
+    // fetch(`/api/categoria/get_id.php?id=${idCat}`)
+    //   .then(data => data.json())
+    //   .then(res => {
+    //     this.setState({
+    //       modalCat: { ...res }
+    //     });
+    //   });
+    this.setState(
+      {
+        modalCat: {
+          nombre: "categooo",
+          descripcion: "kosher, kosher.. y mas kosher"
+        }
+      },
+      () => this.toggle()
+    );
+  };
 
   onSearchChange = val => {
     console.log(val);
@@ -34,7 +66,6 @@ export default class ListaKosher extends React.Component {
       clearTimeout(this.timeOut);
       this.timeOut = setTimeout(
         function() {
-          console.log("wasabi");
           this.filtrarProductos(val);
           clearTimeout(this.timeOut);
         }.bind(this),
@@ -121,21 +152,49 @@ export default class ListaKosher extends React.Component {
             <ListadoProductos
               productos={this.state.productosFiltrados}
               textoDeBusqueda={this.state.textoDeBusqueda}
+              onCatClick={this.mostrarModalCategoria}
             />
           </Col>
         </Row>
+        <Modal
+          isOpen={this.state.modalOpen}
+          toggle={this.toggle}
+          className={this.props.className}
+        >
+          <ModalHeader toggle={this.toggle}>
+            {this.state.modalCat != null
+              ? this.state.modalCat.nombre
+              : "No name"}
+          </ModalHeader>
+          <ModalBody>
+            {this.state.modalCat != null
+              ? this.state.modalCat.descripcion
+              : "Sin descripción"}
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" onClick={this.toggle}>
+              Cerrar
+            </Button>
+          </ModalFooter>
+        </Modal>
       </Container>
     );
   }
 }
 
-const ListadoProductos = ({ productos, textoDeBusqueda }) => {
+const ListadoProductos = ({ productos, textoDeBusqueda, onCatClick }) => {
   if (productos.length) {
     let Lis = productos.map(p => (
       <ListGroupItem key={p.id} className="px-0">
         <Container>
           <Row>
-            <Col md="2" xs="12" sm="12" style={{ fontWeight: "Bold" }}>
+            <Col
+              md="2"
+              xs="12"
+              sm="12"
+              style={{ fontWeight: "Bold" }}
+              onClick={e => onCatClick(p.idCat)}
+            >
               {p.Cat}
             </Col>
             <Col md="2" xs="12" sm="12" style={{ fontWeight: "Bold" }}>

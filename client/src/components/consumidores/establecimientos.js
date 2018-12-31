@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-export default class Restaurantes extends Component {
+export default class Establecimientos extends Component {
   render() {
     return (
       <div>
-        <h1>Restaurantes</h1>
+        <h1>Establecimientos certificados</h1>
       </div>
     );
   }

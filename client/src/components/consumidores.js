@@ -151,8 +151,8 @@ export default class Consumidores extends Component {
                 sm="4"
                 className="px-5 py-2 d-flex align-items-center justify-content-center"
               >
-                <Link to={`${this.props.match.url}restaurantes/`}>
-                  <Button className="btn-custom-reverse">Restaurantes</Button>
+                <Link to={`${this.props.match.url}establecimientos/`}>
+                  <Button className="btn-custom-reverse">Locales</Button>
                 </Link>
               </Col>
               <Col
@@ -160,8 +160,8 @@ export default class Consumidores extends Component {
                 sm="4"
                 className="px-5 py-2 d-flex align-items-center justify-content-center"
               >
-                <Link to={`${this.props.match.url}panaderias/`}>
-                  <Button className="btn-custom-reverse">Panaderías</Button>
+                <Link to={`${this.props.match.url}establecimientos/`}>
+                  <Button className="btn-custom-reverse">Heladerías</Button>
                 </Link>
               </Col>
               <Col
@@ -169,7 +169,7 @@ export default class Consumidores extends Component {
                 sm="4"
                 className="px-5 py-2 d-flex align-items-center justify-content-center"
               >
-                <Link to={`${this.props.match.url}catering/`}>
+                <Link to={`${this.props.match.url}establecimientos/`}>
                   <Button className="btn-custom-reverse">Catering</Button>
                 </Link>
               </Col>
